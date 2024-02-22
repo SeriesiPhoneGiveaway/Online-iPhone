@@ -3,59 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iPhone Giveaways</title>
+  <title>Vertical Container</title>
   <style>
-    body {
-      background-color: #EDEDED;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+    .vertical-container {
+      position: relative; /* Ensure positioning of child elements */
+      width: 100%; /* Adjusted width */
+      height: 30px; /* Height of the container */
+      background-color: #3569F0; /* Background color */
+      border-radius: 0.2rem; /* Rounded corners */
+      margin: 0 auto; /* Center align horizontally */
+      margin-left: 0.5%; /* Add space on the left */
+      margin-right: 10%; /* Add space on the right */
+      margin-top: -0.3rem; /* Negative margin to remove space above */
+      padding-top: 0.4rem; /* Add padding-top to maintain position */
     }
     
-    .container {
-      text-align: center;
+    .icon {
+      position: absolute;
+      left: 5px; /* Adjust the position of the icon */
+      top: 50%; /* Align vertically */
+      transform: translateY(-50%);
+      width: 20px; /* Adjust icon width */
+      height: auto; /* Maintain aspect ratio */
     }
     
-    .headline {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
+    .text {
+      position: absolute;
+      left: 40%; /* Center align horizontally */
+      top: 50%; /* Align vertically */
+      transform: translate(-50%, -50%);
+      color: white; /* Text color */
+      font-weight: bold; /* Make the text bolder */
     }
     
-    .image-post {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-    
-    .claim-button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: white;
-      background-color: #3569F0;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    
-    .gap {
-      margin-bottom: 1rem;
+    .button {
+      position: absolute;
+      right: 5px; /* Adjust the position of the button */
+      top: 50%; /* Align vertically */
+      transform: translateY(-50%);
+      padding: 5px 10px; /* Adjust button padding */
+      background-color: #fff; /* Button background color */
+      color: #3569F0; /* Button text color */
+      border: none; /* Remove button border */
+      border-radius: 0.2rem; /* Button border radius */
+      cursor: pointer; /* Cursor style */
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="headline">iPhone Giveaways</h1>
-    <div class="gap"></div>
-    <img src="iPhone_giveaway_image.jpg" alt="iPhone Giveaway image" class="image-post">
-    <div class="gap"></div>
-    <a href="#" class="claim-button">Claim Now</a>
-    <div class="gap"></div>
-    <h3 class="subheadline">iPhone Giveaway Text</h3>
-  </div>
+
+<div class="vertical-container">
+  <img src="icon.png" alt="Icon" class="icon">
+  <div class="text">Exclusive iPhone Giveaways</div>
+  <button class="button">Claim iPhone</button>
+</div>
+
 </body>
 </html>
